@@ -1,0 +1,14 @@
+• Django -ს MVC, MVT არქიტექტურა
+• ფაილების/საქაღალდეების სტრუქტურა და App -ის ცნება Django -ში
+• Django პარამეტრების ფაილები
+• Django Url-ების კონფიგურაცია, იერარქია
+• დინამიური და სტატიკური ფაილების მენჯმენტი
+• მონაცემთა ბაზებთან ურთიერთობა django models - ის მეშვეობით,django
+models-ის მეთოდები და საკუთრებები. მონაცემთა ტიპები და განსხვავებები მათ
+შორის.
+• Django Models Relations - Foreign-key Field, Many-to-many Field
+• Django Views, Html ფაილების რენდერი, Querying models, კონტექსტები -
+პროექტისთვის საჭირო ლოგიკის ინტეგრაცია.
+• Class Based Views და Function Based Views
+• Template Rendering, template-ის ენის სტრუქტურის გარჩევა
+• პრაქტიკული დავალება: ბლოგის ტიპის ვებსაიტის შექმნა, ბაზასთან კავშირით
