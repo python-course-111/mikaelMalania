@@ -1,0 +1,40 @@
+{%extends "base.html" %}
+
+{% block content %}
+
+    <div class="cryptoPrices">
+        {% for crypto in cryptos %}
+            <div style="display: flex; width: 80px;">
+                <p>price of {{crypto.name}} is {{crypto.priceUsd | floatformat:3 }}</p>
+            </div>
+        {% endfor %}
+
+        <!-- converter from one token to another -->
+
+        <div>
+            <form action="{% url 'crypto_converter' %}" method="POST">
+                {% csrf_token %}
+                <label for="from">From</label>
+                <select name="from" id="from">
+                    {% for crypto in cryptos %}
+                        <option value="{{crypto.name}}">{{crypto.name}}</option>
+                    {% endfor %}
+                </select>
+                <label for="to">To</label>
+                <select name="to" id="to">
+                    {% for crypto in cryptos %}
+                        <option value="{{crypto.name}}">{{crypto.name}}</option>
+                    {% endfor %}
+                </select>
+                <input type="number" name="amount" id="amount">
+                <input type="submit" value="Convert">
+            </form>
+
+            {% if converted_amount %}
+                <p>converted amount is: {{converted_amount}}</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock %}
